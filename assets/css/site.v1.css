@@ -183,3 +183,9 @@ body{padding-bottom:62px}
 .logo__mark{width:36px;height:36px;font-size:13px}
 .header__in{gap:10px}
 }
+
+/* сетка марок */
+.brands{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:1px;background:var(--line,#E4DFD6);border:1px solid var(--line,#E4DFD6)}
+.brands span{background:var(--white,#fff);padding:10px 12px;font-size:14px;font-weight:500;color:var(--ink2,#3D464C);text-align:center;overflow-wrap:anywhere}
+.brands span:hover{background:var(--paper,#F7F5F1);color:var(--ink,#14181B)}
+@media(max-width:520px){.brands{grid-template-columns:repeat(2,minmax(0,1fr))}.brands span{font-size:13.5px;padding:9px 8px}}
