@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Контакты RCV — продажа автомобилей в Гомеле</title>
+<meta name="description" content="Связаться с RCV: +375 (29) 172-01-47, WhatsApp, Telegram, Viber. Гомель и Гомельская область. Заявка на продажу или подбор автомобиля.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314603F'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='13' font-weight='700' fill='%23fff' text-anchor='middle'%3ERCV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F7F4;--white:#fff;--ink:#12140F;--ink2:#41443B;--muted:#7A7D71;--line:#DFE0D7;--line2:#C7C9BC;--green:#14603F;--green-d:#0E442C;--green-l:#E4EFE7;--sand:#EFE9DC;--max:1280px;--pad:22px;--r:4px;--d:'Rubik',system-ui,sans-serif;--b:'Inter',system-ui,sans-serif;--m:'JetBrains Mono',monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:400 16.5px/1.62 var(--b);overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+[hidden]{display:none!important}body.is-locked{overflow:hidden}
+.wrap{width:min(var(--max),100% - var(--pad)*2);margin:0 auto}
+h1,h2,h3{margin:0;font-family:var(--d);font-weight:700;letter-spacing:-.025em;line-height:1.05}
+h1{font-size:clamp(2.15rem,5.4vw,4.2rem)}h2{font-size:clamp(1.7rem,3.6vw,2.9rem)}
+.header{position:sticky;top:0;z-index:60;background:rgba(247,247,244,.96);border-bottom:1px solid var(--line)}
+.header__in{display:flex;align-items:center;gap:18px;padding:13px 0}
+.logo{display:flex;align-items:center;gap:11px;min-width:0}
+.logo__mark{width:42px;height:42px;flex:none;display:grid;place-items:center;border-radius:var(--r);background:var(--green);color:#fff;font-family:var(--d);font-weight:700;font-size:15px}
+.logo__txt{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.logo__txt b{font-family:var(--d);font-size:18px;white-space:nowrap}
+.logo__txt i{font-style:normal;font-family:var(--m);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 24px;border-radius:var(--r);background:var(--green);color:#fff;font-weight:600;font-size:15px;border:1px solid var(--green)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--line2)}
+.btn--light{background:#fff;color:var(--green-d);border-color:#fff}
+.hero{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--line);background:#E6E5DE}
+.hero__bg{position:absolute;inset:0;z-index:-2}
+.hero__bg img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(94deg,rgba(247,247,244,.985) 0%,rgba(247,247,244,.95) 42%,rgba(247,247,244,.56) 70%,rgba(247,247,244,.07) 94%)}
+.hero__in{padding:clamp(34px,5vw,64px) 0 clamp(28px,4vw,52px);min-height:clamp(470px,66vh,690px);display:flex;flex-direction:column;justify-content:flex-end;position:relative}
+.hero__lead{margin:18px 0 0;max-width:50ch;font-size:clamp(1rem,1.3vw,1.12rem);color:var(--ink2)}
+.hero__acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.strip{background:#EFE9DC;border-bottom:1px solid var(--line)}
+.strip__in{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:9px 0}
+.strip__in::-webkit-scrollbar{display:none}
+.strip a{font-family:var(--m);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#6C6A5C;padding:5px 10px;white-space:nowrap}
+.strip a.is-on{color:var(--green-d);background:#fff;box-shadow:inset 0 -2px 0 var(--green)}
+.burger{display:none;width:42px;height:40px;border:1px solid var(--line2);border-radius:var(--r);background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.burger i{display:block;width:17px;height:1.6px;background:var(--ink)}
+.drawer{position:fixed;inset:0;z-index:80;display:none;background:rgba(18,20,15,.52)}
+.drawer.is-open{display:block}
+.drawer__inner{position:absolute;top:0;right:0;bottom:0;width:min(360px,88vw);background:var(--paper);padding:18px;overflow-y:auto;display:flex;flex-direction:column}
+.drawer a.dl{padding:12px 2px;border-bottom:1px solid var(--line);font-family:var(--d);font-size:17px;font-weight:600}
+.mbar{display:none}
+@media(max-width:1099px){.nav,.header__tel{display:none}.burger{display:flex;margin-left:auto}.strip{display:none}
+.mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;background:#fff;border-top:1px solid var(--line);padding:8px 10px;gap:8px}
+.mbar a{flex:1;display:flex;align-items:center;justify-content:center;padding:11px 6px;border:1px solid var(--line2);border-radius:var(--r);font-size:13px;font-weight:600}
+.mbar a.p{background:var(--green);border-color:var(--green);color:#fff}body{padding-bottom:62px}}
+@media(max-width:860px){.hero__in{grid-template-columns:minmax(0,1fr)}}
+</style>
+<link rel="stylesheet" href="assets/css/site.v1.css">
+</head>
+<body>
+<header class="header"><div class="wrap header__in">
+<a class="logo" href="index.html"><span class="logo__mark">RCV</span><span class="logo__txt"><b>RCV</b><i>продажа и подбор автомобилей</i></span></a>
+<nav class="nav"><a href="index.html">Главная</a><a href="prodazha.html">Продажа авто</a><a href="podbor.html">Подбор</a><a href="transport.html">Транспорт</a><a href="process.html">Как работаем</a><a href="ceny.html">Условия</a><a href="o-kompanii.html">О компании</a><a href="kontakty.html" aria-current="page">Контакты</a><a href="politika.html">Политика</a></nav>
+<a class="header__tel" href="tel:+375291720147">+375 (29) 172-01-47</a>
+<button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+</div></header>
+<div class="strip"><div class="wrap strip__in"><a href="index.html">Главная</a><a href="prodazha.html">Продажа авто</a><a href="podbor.html">Подбор</a><a href="transport.html">Транспорт</a><a href="process.html">Как работаем</a><a href="ceny.html">Условия</a><a href="o-kompanii.html">О компании</a><a href="kontakty.html" class="is-on">Контакты</a><a href="politika.html">Политика</a></div></div>
+<main><section class="phero">
+<div class="phero__bg"><img src="assets/img/hero.jpg" alt="Автомобиль на площадке" width="1100" height="620"></div>
+<div class="wrap phero__in">
+<span class="kick">контакты</span>
+<h1>Связаться <em>с RCV</em></h1>
+<p class="phero__lead">Позвоните или напишите в мессенджер: по фото и описанию скажем, что реально по цене и сроку. Работаем по Гомелю и области.</p>
+<div class="phero__acts"><a class="btn" href="tel:+375291720147">+375 (29) 172-01-47</a><a class="btn btn--ghost" href="https://wa.me/375291720147" target="_blank" rel="noopener">WhatsApp</a></div>
+</div></section><section class="sect section--white"><div class="wrap">
+<div class="sect__head"><div class="sect__label">01 — связь</div><div><h2>Как <em>удобнее</em></h2></div></div>
+<div class="rows"><div class="row"><b>Телефон</b><span><a href="tel:+375291720147">+375 (29) 172-01-47</a></span></div><div class="row"><b>WhatsApp</b><span><a href="https://wa.me/375291720147" target="_blank" rel="noopener">Написать в WhatsApp</a></span></div><div class="row"><b>Telegram</b><span><a href="https://t.me/+375291720147" target="_blank" rel="noopener">Написать в Telegram</a></span></div><div class="row"><b>Viber</b><span><a href="viber://chat?number=%2B375291720147">Написать в Viber</a></span></div><div class="row"><b>География</b><span>Гомель и Гомельская область.</span></div><div class="row"><b>Организация</b><span>ООО «Детейлинг Хаб», бренд RCV.</span></div></div></div></section>
+<section class="sect section--sand"><div class="wrap">
+<div class="sect__head"><div class="sect__label">02 — заявка</div><div><h2>Оставьте <em>заявку</em></h2><p class="sect__lead">Заявка открывает WhatsApp с готовым текстом: останется приложить фото автомобиля.</p></div></div>
+<div><h3 style="font-family:var(--d);font-size:1.15rem;margin-bottom:10px">Заявка на продажу или подбор</h3>
+<form class="form" novalidate>
+<input type="text" name="name" placeholder="Имя" autocomplete="name" required>
+<input type="tel" name="phone" placeholder="Телефон" autocomplete="tel" inputmode="tel" required>
+<select name="task"><option>Хочу продать автомобиль</option><option>Хочу подобрать автомобиль</option><option>Коммерческий транспорт</option><option>Другой вопрос</option></select>
+<textarea name="msg" placeholder="Марка, год, пробег, город — или что ищете"></textarea>
+<button class="btn" type="submit">Отправить в WhatsApp</button>
+<p class="hint">Откроется WhatsApp с готовым текстом. Фото автомобиля можно приложить там же.</p>
+</form></div></div></section>
+<section class="cta"><div class="wrap cta__in">
+<div><h2>Обсудим продажу вашего автомобиля</h2><p>Расскажите, что за машина и когда планируете продавать. Скажем, что делаем, в какие сроки и на каких условиях работаем.</p></div>
+<div class="cta__acts"><a class="btn btn--light" href="tel:+375291720147">+375 (29) 172-01-47</a><a class="btn btn--ghost" href="https://wa.me/375291720147" target="_blank" rel="noopener">WhatsApp</a><a class="btn btn--ghost" href="https://t.me/+375291720147" target="_blank" rel="noopener">Telegram</a></div>
+</div></section></main>
+<footer class="footer"><div class="wrap">
+<div class="footer__grid">
+<div><b>RCV · Детейлинг Хаб</b><p style="margin:0">Организация продажи автомобилей под ключ: от объявления и показов до сделки и оформления в ГАИ. Гомель и Гомельская область.</p></div>
+<div><b>Связь</b><a href="tel:+375291720147" style="display:block;margin-bottom:6px">+375 (29) 172-01-47</a><a href="https://wa.me/375291720147" target="_blank" rel="noopener" style="display:block;margin-bottom:6px">WhatsApp</a><a href="https://t.me/+375291720147" target="_blank" rel="noopener" style="display:block;margin-bottom:6px">Telegram</a><a href="viber://chat?number=%2B375291720147">Viber</a></div>
+<div><b>Работаем с</b><p style="margin:0">Легковые автомобили, микроавтобусы и фургоны, коммерческий транспорт до 3,5 т и свыше.</p></div>
+<div><b>Страницы</b><a href="index.html" style="display:block;margin-bottom:5px">Главная</a><a href="prodazha.html" style="display:block;margin-bottom:5px">Продажа авто</a><a href="podbor.html" style="display:block;margin-bottom:5px">Подбор</a><a href="transport.html" style="display:block;margin-bottom:5px">Транспорт</a><a href="process.html" style="display:block;margin-bottom:5px">Как работаем</a><a href="ceny.html" style="display:block;margin-bottom:5px">Условия</a><a href="o-kompanii.html" style="display:block;margin-bottom:5px">О компании</a><a href="kontakty.html" style="display:block;margin-bottom:5px">Контакты</a></div>
+</div>
+<div class="footer__bot"><span>RCV · Гомель и Гомельская область</span><span>Условия обсуждаются индивидуально, информация не является офертой</span></div>
+</div></footer>
+<div class="drawer" id="drawer" aria-hidden="true">
+<div class="drawer__inner" role="dialog" aria-modal="true" aria-label="Меню">
+<div class="drawer__top"><span class="logo__txt"><b>RCV</b><i>продажа и подбор автомобилей</i></span><button class="drawer__close" id="drawerClose" type="button" aria-label="Закрыть меню">×</button></div>
+<a class="dl" href="index.html">Главная</a><a class="dl" href="prodazha.html">Продажа авто</a><a class="dl" href="podbor.html">Подбор</a><a class="dl" href="transport.html">Транспорт</a><a class="dl" href="process.html">Как работаем</a><a class="dl" href="ceny.html">Условия</a><a class="dl" href="o-kompanii.html">О компании</a><a class="dl" href="kontakty.html">Контакты</a><a class="dl" href="politika.html">Политика</a><a class="btn" href="tel:+375291720147">+375 (29) 172-01-47</a>
+</div></div>
+<div class="mbar"><a class="p" href="tel:+375291720147">Позвонить</a><a href="https://wa.me/375291720147" target="_blank" rel="noopener">WhatsApp</a><a href="viber://chat?number=%2B375291720147" target="_blank" rel="noopener">Viber</a><a href="https://t.me/+375291720147" target="_blank" rel="noopener">Telegram</a></div>
+<script src="assets/js/main.v1.js" defer></script>
+</body>
+</html>

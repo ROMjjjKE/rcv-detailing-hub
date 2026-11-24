@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RCV — организация продажи автомобилей под ключ в Гомеле</title>
+<meta name="description" content="RCV: продажа автомобиля под ключ в Гомеле и области. Объявление, продвижение, показы, переговоры, документы и ГАИ. Оплата только за проданный автомобиль. +375 (29) 172-01-47">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314603F'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='13' font-weight='700' fill='%23fff' text-anchor='middle'%3ERCV%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#F7F7F4;--white:#fff;--ink:#12140F;--ink2:#41443B;--muted:#7A7D71;--line:#DFE0D7;--line2:#C7C9BC;--green:#14603F;--green-d:#0E442C;--green-l:#E4EFE7;--sand:#EFE9DC;--max:1280px;--pad:22px;--r:4px;--d:'Rubik',system-ui,sans-serif;--b:'Inter',system-ui,sans-serif;--m:'JetBrains Mono',monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:400 16.5px/1.62 var(--b);overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+[hidden]{display:none!important}body.is-locked{overflow:hidden}
+.wrap{width:min(var(--max),100% - var(--pad)*2);margin:0 auto}
+h1,h2,h3{margin:0;font-family:var(--d);font-weight:700;letter-spacing:-.025em;line-height:1.05}
+h1{font-size:clamp(2.15rem,5.4vw,4.2rem)}h2{font-size:clamp(1.7rem,3.6vw,2.9rem)}
+.header{position:sticky;top:0;z-index:60;background:rgba(247,247,244,.96);border-bottom:1px solid var(--line)}
+.header__in{display:flex;align-items:center;gap:18px;padding:13px 0}
+.logo{display:flex;align-items:center;gap:11px;min-width:0}
+.logo__mark{width:42px;height:42px;flex:none;display:grid;place-items:center;border-radius:var(--r);background:var(--green);color:#fff;font-family:var(--d);font-weight:700;font-size:15px}
+.logo__txt{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.logo__txt b{font-family:var(--d);font-size:18px;white-space:nowrap}
+.logo__txt i{font-style:normal;font-family:var(--m);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 24px;border-radius:var(--r);background:var(--green);color:#fff;font-weight:600;font-size:15px;border:1px solid var(--green)}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--line2)}
+.btn--light{background:#fff;color:var(--green-d);border-color:#fff}
+.hero{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--line);background:#E6E5DE}
+.hero__bg{position:absolute;inset:0;z-index:-2}
+.hero__bg img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.hero::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(94deg,rgba(247,247,244,.985) 0%,rgba(247,247,244,.95) 42%,rgba(247,247,244,.56) 70%,rgba(247,247,244,.07) 94%)}
+.hero__in{padding:clamp(34px,5vw,64px) 0 clamp(28px,4vw,52px);min-height:clamp(470px,66vh,690px);display:flex;flex-direction:column;justify-content:flex-end;position:relative}
+.hero__lead{margin:18px 0 0;max-width:50ch;font-size:clamp(1rem,1.3vw,1.12rem);color:var(--ink2)}
+.hero__acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.strip{background:#EFE9DC;border-bottom:1px solid var(--line)}
+.strip__in{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding:9px 0}
+.strip__in::-webkit-scrollbar{display:none}
+.strip a{font-family:var(--m);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#6C6A5C;padding:5px 10px;white-space:nowrap}
+.strip a.is-on{color:var(--green-d);background:#fff;box-shadow:inset 0 -2px 0 var(--green)}
+.burger{display:none;width:42px;height:40px;border:1px solid var(--line2);border-radius:var(--r);background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.burger i{display:block;width:17px;height:1.6px;background:var(--ink)}
+.drawer{position:fixed;inset:0;z-index:80;display:none;background:rgba(18,20,15,.52)}
+.drawer.is-open{display:block}
+.drawer__inner{position:absolute;top:0;right:0;bottom:0;width:min(360px,88vw);background:var(--paper);padding:18px;overflow-y:auto;display:flex;flex-direction:column}
+.drawer a.dl{padding:12px 2px;border-bottom:1px solid var(--line);font-family:var(--d);font-size:17px;font-weight:600}
+.mbar{display:none}
+@media(max-width:1099px){.nav,.header__tel{display:none}.burger{display:flex;margin-left:auto}.strip{display:none}
+.mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;background:#fff;border-top:1px solid var(--line);padding:8px 10px;gap:8px}
+.mbar a{flex:1;display:flex;align-items:center;justify-content:center;padding:11px 6px;border:1px solid var(--line2);border-radius:var(--r);font-size:13px;font-weight:600}
+.mbar a.p{background:var(--green);border-color:var(--green);color:#fff}body{padding-bottom:62px}}
+@media(max-width:860px){.hero__in{grid-template-columns:minmax(0,1fr)}}
+</style>
+<link rel="stylesheet" href="assets/css/site.v1.css">
+</head>
+<body>
+<header class="header"><div class="wrap header__in">
+<a class="logo" href="index.html"><span class="logo__mark">RCV</span><span class="logo__txt"><b>RCV</b><i>продажа и подбор автомобилей</i></span></a>
+<nav class="nav"><a href="index.html" aria-current="page">Главная</a><a href="prodazha.html">Продажа авто</a><a href="podbor.html">Подбор</a><a href="transport.html">Транспорт</a><a href="process.html">Как работаем</a><a href="ceny.html">Условия</a><a href="o-kompanii.html">О компании</a><a href="kontakty.html">Контакты</a><a href="politika.html">Политика</a></nav>
+<a class="header__tel" href="tel:+375291720147">+375 (29) 172-01-47</a>
+<button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+</div></header>
+<div class="strip"><div class="wrap strip__in"><a href="index.html" class="is-on">Главная</a><a href="prodazha.html">Продажа авто</a><a href="podbor.html">Подбор</a><a href="transport.html">Транспорт</a><a href="process.html">Как работаем</a><a href="ceny.html">Условия</a><a href="o-kompanii.html">О компании</a><a href="kontakty.html">Контакты</a><a href="politika.html">Политика</a></div></div>
+<main><section class="hero">
+<div class="hero__bg"><img src="assets/img/hero.jpg" alt="Автомобиль, подготовленный к продаже" width="1600" height="900" fetchpriority="high"></div>
+<div class="wrap hero__in">
+<span class="kick">Гомель и область · продажа под ключ</span>
+<h1>Продадим ваш автомобиль <em>без ваших звонков</em></h1>
+<p class="hero__lead">Берём на себя всё: фотосъёмку, объявление, продвижение, ответы на десятки обращений, показы, торг и оформление. Вы появляетесь только на показ и сделку.</p>
+<div class="hero__acts"><a class="btn" href="tel:+375291720147">+375 (29) 172-01-47</a><a class="btn btn--ghost" href="https://wa.me/375291720147" target="_blank" rel="noopener">WhatsApp</a></div>
+<div class="hero__figs"><div><b>0 р.</b><span>если не продали</span></div><div><b>3–6 нед.</b><span>обычный срок</span></div><div><b>до 3,5 т и выше</b><span>любой транспорт</span></div><div><b>Гомель</b><span>и область</span></div></div>
+</div></section><section class="sect section--white"><div class="wrap">
+<div class="sect__head"><div class="sect__label">01 — оценка</div><div><h2>Сколько времени <em>займёт продажа</em></h2><p class="sect__lead">Три вопроса — ориентир по сроку, числу показов и что именно мы делаем. Без регистрации и звонков от менеджеров.</p></div></div>
+<div class="est" data-est>
+<div class="est__form">
+<div class="ef"><span class="ef__lab">1. Что продаёте</span><div class="ef__opts" data-q="type">
+<button type="button" data-v="Легковой" aria-pressed="true">Легковой</button><button type="button" data-v="Кроссовер" aria-pressed="false">Кроссовер</button><button type="button" data-v="Микроавтобус" aria-pressed="false">Микроавтобус</button><button type="button" data-v="Фургон" aria-pressed="false">Фургон</button><button type="button" data-v="Коммерческий до 3,5 т" aria-pressed="false">Коммерческий до 3,5 т</button><button type="button" data-v="Свыше 3,5 т" aria-pressed="false">Свыше 3,5 т</button></div></div>
+<div class="ef"><span class="ef__lab">2. Возраст и пробег</span><div class="ef__opts" data-q="age">
+<button type="button" data-v="До 3 лет" aria-pressed="false">До 3 лет</button><button type="button" data-v="3–7 лет" aria-pressed="true">3–7 лет</button><button type="button" data-v="7–12 лет" aria-pressed="false">7–12 лет</button><button type="button" data-v="Старше 12 лет" aria-pressed="false">Старше 12 лет</button></div></div>
+<div class="ef"><span class="ef__lab">3. Что важнее</span><div class="ef__opts" data-q="goal">
+<button type="button" data-v="Продать быстрее" aria-pressed="false">Продать быстрее</button><button type="button" data-v="Продать дороже" aria-pressed="true">Продать дороже</button><button type="button" data-v="Не тратить своё время" aria-pressed="false">Не тратить время</button></div></div>
+<p class="hint" style="font-size:12.6px;color:var(--muted)">Ориентир, а не обещание: точный срок и стратегию обсуждаем после осмотра автомобиля.</p>
+</div>
+<div class="est__out">
+<span class="kick">Ориентир по вашей машине</span>
+<h3 data-e-title>Кроссовер, 3–7 лет</h3>
+<p data-e-desc>Стратегия: продать дороже.</p>
+<div class="est__meta"><div><b data-e-term>3–6 недель</b><span>срок продажи</span></div><div><b data-e-shows>8–15</b><span>показов</span></div></div>
+<ul class="est__list" data-e-list></ul>
+<a class="btn btn--light" data-e-wa href="https://wa.me/375291720147" target="_blank" rel="noopener">Обсудить в WhatsApp</a>
+</div></div></div></section>
+<section class="sect "><div class="wrap">
+<div class="sect__head"><div class="sect__label">02 — что делаем</div><div><h2>Полный цикл <em>продажи</em></h2><p class="sect__lead">Процесс разбит на этапы, и на каждом вы понимаете, что происходит с вашей машиной и деньгами.</p></div></div>
+<div class="lots"><article class="lot"><div class="lot__body"><h3>Объявление и фото</h3><p>Снимаем автомобиль при дневном свете: кузов, салон, детали, документы. Пишем описание без «не бит, не крашен» — с фактами и комплектацией.</p></div></article><article class="lot"><div class="lot__body"><h3>Размещение и продвижение</h3><p>Публикуем на популярных площадках и продвигаем показ, чтобы объявление видели те, кто сейчас выбирает машину.</p></div></article><article class="lot"><div class="lot__body"><h3>Обращения и звонки</h3><p>Отвечаем на десятки сообщений вместо вас, отсеиваем перекупов и «просто спросить», оставляем реальных покупателей.</p></div></article><article class="lot"><div class="lot__body"><h3>Показы</h3><p>Организуем просмотры в удобное время, показываем автомобиль и отвечаем на вопросы о состоянии и истории.</p></div></article><article class="lot"><div class="lot__body"><h3>Торг и цена</h3><p>Ведём переговоры о стоимости и согласуем с вами каждый шаг: снижать цену или держать.</p></div></article><article class="lot"><div class="lot__body"><h3>Сделка и ГАИ</h3><p>Готовим договор и документы, сопровождаем оформление. Вы не разбираетесь в бланках самостоятельно.</p></div></article></div></div></section>
+<section class="sect section--white"><div class="wrap">
+<div class="sect__head"><div class="sect__label">03 — порядок</div><div><h2>Четыре шага <em>до денег</em></h2></div></div>
+<div class="steps"><div class="step"><h3>Осмотр и оценка</h3><p>Смотрим автомобиль, документы и историю. Называем реальную вилку цены и срок.</p></div><div class="step"><h3>Подготовка</h3><p>Фотосъёмка, объявление, размещение и продвижение. Согласуем текст с вами.</p></div><div class="step"><h3>Показы и торг</h3><p>Принимаем обращения, показываем машину, ведём переговоры. Вы в курсе каждого шага.</p></div><div class="step"><h3>Сделка</h3><p>Договор, деньги, оформление в ГАИ. Автомобиль снят с учёта, вы свободны.</p></div></div></div></section>
+<section class="sect section--sand"><div class="wrap">
+<div class="sect__head"><div class="sect__label">04 — условия</div><div><h2>Как мы <em>зарабатываем</em></h2><p class="sect__lead">Работаем в интересах собственника и согласовываем условия продажи с ним. Если автомобиль не продан — услуга не оплачивается.</p></div></div>
+<div class="rows"><div class="row"><b>Оплата</b><span>Только за результат: если автомобиль не продан, вы ничего не платите.</span></div><div class="row"><b>Согласование цены</b><span>Любое изменение стоимости — только с вашего согласия.</span></div><div class="row"><b>Прозрачность</b><span>Показываем, сколько обращений и показов было, что говорят покупатели.</span></div><div class="row"><b>Документы</b><span>Договор оказания услуг и договор купли-продажи: копии остаются у вас.</span></div><div class="row"><b>Сроки</b><span>Называем реалистичный срок, а не «продадим за неделю».</span></div><div class="row"><b>Выход из работы</b><span>Если решите продавать сами — просто скажите, мы остановимся.</span></div></div></div></section>
+<section class="sect section--white"><div class="wrap">
+<div class="sect__head"><div class="sect__label">05 — транспорт</div><div><h2>С каким транспортом <em>работаем</em></h2></div></div>
+<div class="lots"><article class="lot">
+<div class="lot__top"><span class="lot__type">Легковые</span><span class="lot__st ">в работе</span></div>
+<div class="lot__body"><h3>Легковые автомобили</h3><p>Седаны, хэтчбеки, кроссоверы. Самая частая категория: готовим объявление и ведём показы.</p><div class="lot__price"><b>по оценке</b><span>комиссия после продажи</span></div></div>
+</article><article class="lot">
+<div class="lot__top"><span class="lot__type">Микроавтобусы</span><span class="lot__st ">в работе</span></div>
+<div class="lot__body"><h3>Микроавтобусы и фургоны</h3><p>Пассажирские и грузовые версии: отдельная аудитория покупателей и свои вопросы по документам.</p><div class="lot__price"><b>по оценке</b><span>комиссия после продажи</span></div></div>
+</article><article class="lot">
+<div class="lot__top"><span class="lot__type">Коммерческий</span><span class="lot__st lot__st--new">в работе</span></div>
+<div class="lot__body"><h3>Коммерческий транспорт</h3><p>До 3,5 тонн и свыше: работаем с владельцами и организациями, помогаем с оформлением.</p><div class="lot__price"><b>по оценке</b><span>обсуждаем индивидуально</span></div></div>
+</article></div><p style="margin-top:20px"><a class="btn btn--ghost" href="transport.html">Подробнее о категориях</a></p>
+</div></section>
+<section class="sect "><div class="wrap">
+<div class="sect__head"><div class="sect__label">06 — подбор</div><div><h2>Нужно не продать, <em>а купить</em></h2><p class="sect__lead">Вторая сторона нашей работы: подбор автомобиля под задачу и бюджет. Проверяем историю, состояние и документы до сделки.</p></div></div>
+<div class="rows"><div class="row"><b>Что ищем</b><span>Формулируем требования: бюджет, кузов, пробег, город эксплуатации.</span></div><div class="row"><b>Проверка</b><span>История по базам, осмотр, проверка документов и обременений.</span></div><div class="row"><b>Отчёт</b><span>Рассказываем, что нашли: сильные стороны, риски, стоимость ремонта.</span></div><div class="row"><b>Сделка</b><span>Помогаем договориться о цене и оформить покупку.</span></div></div><p style="margin-top:20px"><a class="btn btn--ghost" href="podbor.html">Как проходит подбор</a></p>
+</div></section>
+<section class="sect section--white"><div class="wrap">
+<div class="sect__head"><div class="sect__label">07 — вопросы</div><div><h2>Частые <em>вопросы</em></h2></div></div>
+<div class="faq"><details><summary>Сколько стоит ваша услуга?</summary><p>Условия обсуждаем индивидуально: зависит от категории транспорта и сложности продажи. Если автомобиль не продан, оплаты нет.</p></details><details><summary>Вы работаете только в Гомеле?</summary><p>Основная зона — Гомель и Гомельская область. По другим городам обсуждаем отдельно.</p></details><details><summary>Кто показывает автомобиль?</summary><p>Мы организуем показы и присутствуем на них. Вам не нужно освобождать день под звонки.</p></details><details><summary>Что если покупатель предложит ниже?</summary><p>Торг ведём мы, но решение о снижении цены всегда за вами.</p></details><details><summary>Нужно ли переоформлять автомобиль на вас?</summary><p>Нет. Автомобиль остаётся вашим до сделки, договор купли-продажи оформляется на покупателя.</p></details><details><summary>Можно продать коммерческий транспорт?</summary><p>Да: микроавтобусы, фургоны, техника до 3,5 тонн и свыше. Условия обсуждаем отдельно.</p></details></div></div></section>
+<section class="cta"><div class="wrap cta__in">
+<div><h2>Обсудим продажу вашего автомобиля</h2><p>Расскажите, что за машина и когда планируете продавать. Скажем, что делаем, в какие сроки и на каких условиях работаем.</p></div>
+<div class="cta__acts"><a class="btn btn--light" href="tel:+375291720147">+375 (29) 172-01-47</a><a class="btn btn--ghost" href="https://wa.me/375291720147" target="_blank" rel="noopener">WhatsApp</a><a class="btn btn--ghost" href="https://t.me/+375291720147" target="_blank" rel="noopener">Telegram</a></div>
+</div></section></main>
+<footer class="footer"><div class="wrap">
+<div class="footer__grid">
+<div><b>RCV · Детейлинг Хаб</b><p style="margin:0">Организация продажи автомобилей под ключ: от объявления и показов до сделки и оформления в ГАИ. Гомель и Гомельская область.</p></div>
+<div><b>Связь</b><a href="tel:+375291720147" style="display:block;margin-bottom:6px">+375 (29) 172-01-47</a><a href="https://wa.me/375291720147" target="_blank" rel="noopener" style="display:block;margin-bottom:6px">WhatsApp</a><a href="https://t.me/+375291720147" target="_blank" rel="noopener" style="display:block;margin-bottom:6px">Telegram</a><a href="viber://chat?number=%2B375291720147">Viber</a></div>
+<div><b>Работаем с</b><p style="margin:0">Легковые автомобили, микроавтобусы и фургоны, коммерческий транспорт до 3,5 т и свыше.</p></div>
+<div><b>Страницы</b><a href="index.html" style="display:block;margin-bottom:5px">Главная</a><a href="prodazha.html" style="display:block;margin-bottom:5px">Продажа авто</a><a href="podbor.html" style="display:block;margin-bottom:5px">Подбор</a><a href="transport.html" style="display:block;margin-bottom:5px">Транспорт</a><a href="process.html" style="display:block;margin-bottom:5px">Как работаем</a><a href="ceny.html" style="display:block;margin-bottom:5px">Условия</a><a href="o-kompanii.html" style="display:block;margin-bottom:5px">О компании</a><a href="kontakty.html" style="display:block;margin-bottom:5px">Контакты</a></div>
+</div>
+<div class="footer__bot"><span>RCV · Гомель и Гомельская область</span><span>Условия обсуждаются индивидуально, информация не является офертой</span></div>
+</div></footer>
+<div class="drawer" id="drawer" aria-hidden="true">
+<div class="drawer__inner" role="dialog" aria-modal="true" aria-label="Меню">
+<div class="drawer__top"><span class="logo__txt"><b>RCV</b><i>продажа и подбор автомобилей</i></span><button class="drawer__close" id="drawerClose" type="button" aria-label="Закрыть меню">×</button></div>
+<a class="dl" href="index.html">Главная</a><a class="dl" href="prodazha.html">Продажа авто</a><a class="dl" href="podbor.html">Подбор</a><a class="dl" href="transport.html">Транспорт</a><a class="dl" href="process.html">Как работаем</a><a class="dl" href="ceny.html">Условия</a><a class="dl" href="o-kompanii.html">О компании</a><a class="dl" href="kontakty.html">Контакты</a><a class="dl" href="politika.html">Политика</a><a class="btn" href="tel:+375291720147">+375 (29) 172-01-47</a>
+</div></div>
+<div class="mbar"><a class="p" href="tel:+375291720147">Позвонить</a><a href="https://wa.me/375291720147" target="_blank" rel="noopener">WhatsApp</a><a href="viber://chat?number=%2B375291720147" target="_blank" rel="noopener">Viber</a><a href="https://t.me/+375291720147" target="_blank" rel="noopener">Telegram</a></div>
+<script src="assets/js/main.v1.js" defer></script>
+</body>
+</html>
